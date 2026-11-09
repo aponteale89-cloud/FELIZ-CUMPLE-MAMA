@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Mamá! 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pantalla de Inicio -->
+    <div id="welcome-screen" class="screen">
+        <div class="welcome-stars"></div>
+        <div class="welcome-box">
+            <p class="eyebrow">UNA CARTA ESCRITA CON LUZ</p>
+            <h1>Feliz Cumpleaños Mamá 💖</h1>
+            <p class="welcome-copy">Hay un pequeño universo esperándote.<br>Entra para descubrirlo.</p>
+            <button id="start-btn" class="glow-button">✨ Abrir Regalo ✨</button>
+            <p class="tap-hint">Toca para comenzar la celebración</p>
+        </div>
+    </div>
+
+    <!-- Galaxia interactiva -->
+    <main id="galaxy-container" class="screen hidden" aria-hidden="true">
+        <canvas id="galaxyCanvas"></canvas>
+        <div class="scene-vignette"></div>
+        <div class="scene-topbar">
+            <span class="scene-label"><i></i> PARA LA MUJER QUE ILUMINA TODO</span>
+            <button id="replay-btn" class="replay-btn" type="button" aria-label="Volver a ver la bienvenida">↺ <span>Volver a empezar</span></button>
+        </div>
+
+        <div class="orbit-ring orbit-ring-one"></div>
+        <div class="orbit-ring orbit-ring-two"></div>
+        <div class="orbit-ring orbit-ring-three"></div>
+
+        <div class="galaxy-center-content">
+            <div class="heart-glowing">❤️</div>
+            <div class="beam-of-light"></div>
+            <p class="center-kicker">MI UNIVERSO FAVORITO</p>
+            <h1 class="center-title">¡Feliz cumpleaños, mamá!</h1>
+            <p class="center-subtitle">12 pequeños planetas, 24 recuerdos y todo nuestro amor.<br>Elige uno para descubrir su historia.</p>
+        </div>
+
+        <section id="orbit-nodes-container" aria-label="Planetas de recuerdos"></section>
+    </main>
+
+    <!-- Modal / Tarjeta Dorada Inmersiva (Estilo Carta Emergente del Video) -->
+    <div id="detail-modal" class="modal hidden" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text">
+            <button id="close-modal-icon" class="close-icon" type="button" aria-label="Cerrar carta">×</button>
+            <p class="modal-eyebrow">UN MENSAJE PARA TI</p>
+            <h2 id="modal-title">Mi Amor Bonito</h2>
+            
+            <div class="modal-body">
+                <!-- Animación del programa en tiempo real -->
+                <canvas id="programCanvas" width="300" height="300"></canvas>
+                
+                <p id="modal-text">Mensaje dedicado con mucho amor...</p>
+                
+                <div class="modal-images">
+                    <img id="modal-img-1" alt="Primer recuerdo familiar">
+                    <img id="modal-img-2" alt="Segundo recuerdo familiar">
+                </div>
+            </div>
+
+            <button id="close-modal-btn" class="close-btn" type="button">Guardar este momento <span>↗</span></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
